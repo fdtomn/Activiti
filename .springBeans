@@ -9,6 +9,8 @@
 	<configs>
 		<config>src/main/resources/spring/springmvc.xml</config>
 		<config>src/main/resources/activiti.cfg.xml</config>
+		<config>src/main/resources/spring/applicationContext-jdbc.xml</config>
+		<config>src/main/resources/spring/applicationContext-activiti.xml</config>
 	</configs>
 	<configSets>
 	</configSets>
