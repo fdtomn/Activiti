@@ -1,0 +1,19 @@
+sqlplus sys/sys as sysdba
+
+drop user activiti cascade; 
+
+create tablespace activiti
+logging
+datafile 'D:\develop\db\oracle\oradata\orcl\activiti_data.dbf' 
+size 300m 
+autoextend on 
+next 300m maxsize 2048m
+extent management local;
+
+
+create user activiti identified by activiti
+default tablespace activiti
+
+
+grant connect,resource to activiti;
+
