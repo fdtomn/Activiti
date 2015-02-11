@@ -3,11 +3,11 @@
   <process id="holidayRequest" name="请假单" isExecutable="true">
     <endEvent id="end" name="结束"></endEvent>
     <startEvent id="start" name="开始"></startEvent>
-    <userTask id="usertask1" name="填写请假单"></userTask>
+    <userTask id="usertask1" name="填写请假单" activiti:assignee="张三"></userTask>
     <sequenceFlow id="flow1" sourceRef="start" targetRef="usertask1"></sequenceFlow>
-    <userTask id="usertask2" name="主管审批"></userTask>
+    <userTask id="usertask2" name="主管审批" activiti:assignee="李四"></userTask>
     <sequenceFlow id="flow2" sourceRef="usertask1" targetRef="usertask2"></sequenceFlow>
-    <userTask id="usertask3" name="经理审批"></userTask>
+    <userTask id="usertask3" name="经理审批" activiti:assignee="王五"></userTask>
     <sequenceFlow id="flow3" sourceRef="usertask2" targetRef="usertask3"></sequenceFlow>
     <sequenceFlow id="flow4" sourceRef="usertask3" targetRef="end"></sequenceFlow>
   </process>
